@@ -4,6 +4,11 @@
     <title>Array Traversing</title>
   </head>
   <body>
+    <input type="text" placeholder="Enter index" id="element" />
+    <button onclick="getElement()">Get Element</button>
+    <br />
+    <br />
+
     <script>
       let data = [24, 54, 63, 14, 95, 65, 34, 72];
 
@@ -11,6 +16,24 @@
       for (let i = 0; i < data.length; i++) {
         document.write(`Element on index ${i} is ${data[i]} <br/>`);
       }
+
+      // Array Accessing
+      let x = 3;
+      document.write(data[x]);
+
+      const getElement = () => {
+        let index = document.getElementById("element").value;
+        let el = data[index];
+        if (
+          index < data.length &&
+          index >= 0 &&
+          typeof parseInt(index) === "number"
+        ) {
+          alert(`Element on index ${index} is ${el}`);
+        } else {
+          alert("Please enter a valid index number :)");
+        }
+      };
     </script>
   </body>
 </html>
