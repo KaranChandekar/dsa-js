@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Deleting</title>
+    <script>
+      let data = [24, 54, 63, 14, 95, 65];
+      console.log(data);
+      const deleteEl = () => {
+        let position = document.getElementById("position").value;
+        position = parseInt(position);
+        for (i = position; i < data.length; i++) {
+          if (position >= 0 && position <= data.length) {
+            data[i] = data[i + 1];
+          } else {
+            console.log("Please enter a valid position :)");
+          }
+        }
+        data.length = data.length - 1;
+        console.log(data);
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter position" id="position" />
+    <button onclick="deleteEl()">Delete</button>
+  </body>
+</html>
