@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Searching</title>
+    <script>
+      let data = [24, 54, 63, 14, 95, 65];
+
+      const searchElement = () => {
+        let searchEl = document.getElementById("searchEl").value;
+        for (i = 0; i < data.length; i++) {
+          // console.log(data[i]);
+          if (data[i] == searchEl) {
+            alert(`Element ${searchEl} exists in data, it's index is ${i}`);
+            break;
+          }
+        }
+      };
+      
+      // let searchEl = 63;
+      // console.warn(data.indexOf(searchEl));
+      // data.splice(1, 1);
+      // console.log(data);
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="enter value" id="searchEl" />
+    <button onclick="searchElement()">Search Element</button>
+  </body>
+</html>
