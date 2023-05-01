@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Array Merging with While loop</title>
+    <script>
+      let arr_1 = [3, 7, 11, 25, 30];
+      let arr_2 = [2, 5, 17, 40, 56, 67, 73];
+      let arr_3 = [];
+      let a1 = 0,
+        a2 = 0,
+        a3 = 0;
+
+      while (a1 < arr_1.length && a2 < arr_2.length) {
+        if (arr_1[a1] < arr_2[a2]) {
+          arr_3[a3] = arr_1[a1];
+          a1++;
+        } else {
+          arr_3[a3] = arr_2[a2];
+          a2++;
+        }
+        a3++;
+      }
+
+      while (a2 < arr_2.length) {
+        arr_3[a3] = arr_2[a2];
+        a2++;
+        a3++;
+      }
+
+      console.log(arr_3);
+    </script>
+  </head>
+  <body></body>
+</html>
