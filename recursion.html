@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recursion</title>
+    <script>
+      //   const apple = (x) => {
+      //     console.log(x);
+      //     if (x < 10) {
+      //       apple(x + 1);
+      //     }
+      //   };
+      //   let data = 5;
+      //   apple(data);
+
+      const factorial = (item) => {
+        if (item == 0) {
+          return 1;
+        }
+        return item * factorial(item - 1);
+      };
+      let data = 5;
+      console.log(factorial(data));
+    </script>
+  </head>
+  <body></body>
+</html>
