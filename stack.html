@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stack</title>
+    <script>
+      let data = [];
+      let currentSize = data.length;
+      let max = 15;
+
+      const push = (newVal) => {
+        if (currentSize >= max) {
+          alert(`Stack is full, cannot add ${newVal}`);
+        } else {
+          data[currentSize] = newVal;
+          currentSize += 1;
+        }
+      };
+
+      const pop = () => {
+        if (currentSize > 0) {
+          currentSize -= 1;
+          data.length = currentSize;
+        } else {
+          alert("Stack is already empty :)");
+        }
+      };
+
+      push(23);
+      push(34);
+      push(45);
+      push(82);
+      push(67);
+      push(73);
+      pop();
+      pop();
+      pop();
+      push(56);
+      push(15);
+      pop();
+
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>
