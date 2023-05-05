@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Indirect Recursion</title>
+    <script>
+      let money = 100,
+        totalApple = 0;
+
+      const buyApple = (x) => {
+        if (x > 0) {
+          console.log(
+            `I bought ${totalApple} apples and I have ${x} Rs remaining!`
+          );
+          buyMore(x);
+        } else {
+          console.log(`I don't have more money :)`);
+        }
+      };
+
+      const buyMore = (x) => {
+        totalApple++;
+        buyApple(x - 20);
+      };
+
+      buyApple(money);
+    </script>
+  </head>
+  <body>
+    <h1>Indirect Recursion</h1>
+  </body>
+</html>
