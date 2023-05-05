@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reverse Array with Recursion</title>
+    <script>
+      let data = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      const arrReverse = (data, start, end) => {
+        console.log(data);
+        if (start <= end) {
+          let temp = data[start];
+          data[start] = data[end];
+          data[end] = temp;
+          arrReverse(data, start + 1, end - 1);
+        }
+      };
+      arrReverse(data, 0, data.length - 1);
+    </script>
+  </head>
+  <body>
+    <h1>Reverse Array with Recursion</h1>
+  </body>
+</html>
